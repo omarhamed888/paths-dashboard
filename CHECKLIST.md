@@ -134,7 +134,8 @@ Password: admin123
 - [ ] Login/Logout
 - [ ] Create intern account
 - [ ] Create task
-- [ ] Assign task
+- [ ] Delete task
+- [ ] Assign task (Test "Select All")
 - [ ] Mark attendance
 - [ ] Submit task (as intern)
 - [ ] Download submission

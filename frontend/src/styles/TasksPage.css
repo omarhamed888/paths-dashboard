@@ -41,6 +41,8 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: var(--spacing-4);
     margin-top: var(--spacing-4);
+    align-items: start;
+    /* Prevent cards from stretching to match height */
 }
 
 .task-card {
@@ -78,6 +80,49 @@
 .task-meta {
     padding-top: var(--spacing-3);
     border-top: 1px solid var(--color-gray-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    align-items: flex-start;
+    /* Align everything to the left */
+}
+
+.task-deadline {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    width: 100%;
+}
+
+.btn-delete {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    /* Removed align-self: flex-end and margin-left: auto */
+    width: auto;
+}
+
+.btn-delete:hover {
+    background-color: #fecaca;
+    border-color: #f87171;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-delete:active {
+    transform: translateY(0);
+    background-color: #fee2e2;
 }
 
 .task-deadline {

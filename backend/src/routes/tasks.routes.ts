@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import {
     createTask,
+    deleteTask,
     assignTask,
     getTasks,
     getTaskById,
@@ -18,6 +19,12 @@ const router = Router();
  * Create a new task (admin only)
  */
 router.post('/', authenticateToken, requireAdmin, createTask);
+
+/**
+ * DELETE /api/tasks/:id
+ * Delete a task (admin only)
+ */
+router.delete('/:id', authenticateToken, requireAdmin, deleteTask);
 
 /**
  * POST /api/tasks/:id/assign

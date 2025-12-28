@@ -70,7 +70,7 @@ Includes:
 ### For Admins
 -  Dashboard with KPIs
 -  Intern management
--  Task creation & assignment
+-  Task creation, assignment (Bulk/Single), & deletion
 -  Attendance tracking
 -  Submission rating
 -  Alert monitoring

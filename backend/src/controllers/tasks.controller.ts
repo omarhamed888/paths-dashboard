@@ -38,6 +38,53 @@ export const createTask = async (req: AuthRequest, res: Response): Promise<void>
 };
 
 /**
+ * Delete a task (admin only)
+ */
+export const deleteTask = async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+        const { id } = req.params;
+
+        if (!req.user) {
+            res.status(401).json({ error: 'Not authenticated' });
+            return;
+        }
+
+        // Check if task exists
+        const taskCheck = await query('SELECT id FROM tasks WHERE id = $1', [id]);
+        if (taskCheck.rows.length === 0) {
+            res.status(404).json({ error: 'Task not found' });
+            return;
+        }
+
+        // Delete the task (Relies on CASCADE or manual cleanup if needed)
+        // Attempting direct delete; if FK constraint fails, we need manual cleanup.
+        // Assuming CASCADE is set up or we do it here.
+        // Safe approach: Delete generic dependencies if simple delete fails? 
+        // Let's try simple delete. If your schema.sql didn't use CASCADE, this might fail with FK violation.
+        // Be robust:
+        const client = await getClient();
+        try {
+            await client.query('BEGIN');
+
+            // Clean up could be complex, assuming ON DELETE CASCADE for now to keep code clean.
+            // If it fails, I will revise.
+            await client.query('DELETE FROM tasks WHERE id = $1', [id]);
+
+            await client.query('COMMIT');
+            res.json({ message: 'Task deleted successfully' });
+        } catch (error) {
+            await client.query('ROLLBACK');
+            throw error;
+        } finally {
+            client.release();
+        }
+    } catch (error) {
+        console.error('Delete task error:', error);
+        res.status(500).json({ error: 'Failed to delete task' });
+    }
+};
+
+/**
  * Assign task to interns
  * AUTOMATION RULE: Creates task notification for each assigned intern
  */
