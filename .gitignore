@@ -1,0 +1,23 @@
+# Backend
+node_modules/
+dist/
+*.log
+.env
+
+# Frontend
+node_modules/
+dist/
+.DS_Store
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db

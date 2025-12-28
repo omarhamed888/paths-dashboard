@@ -1,0 +1,118 @@
+.date-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.date-selector label {
+    margin: 0;
+    font-weight: var(--font-weight-medium);
+}
+
+.date-selector input[type="date"] {
+    width: auto;
+}
+
+.attendance-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    margin-top: var(--spacing-4);
+}
+
+.attendance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-4);
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.attendance-item:hover {
+    background-color: var(--color-gray-100);
+    box-shadow: var(--shadow-sm);
+}
+
+.intern-info {
+    flex: 1;
+}
+
+.intern-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-1);
+}
+
+.intern-email {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+}
+
+.attendance-buttons {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.btn-outline-success,
+.btn-outline-warning,
+.btn-outline-danger {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.btn-outline-success {
+    border-color: var(--color-success);
+    color: var(--color-success);
+}
+
+.btn-outline-success:hover,
+.btn-outline-success.active {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+.btn-outline-warning {
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning.active {
+    background-color: var(--color-warning);
+    color: var(--color-white);
+}
+
+.btn-outline-danger {
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger.active {
+    background-color: var(--color-error);
+    color: var(--color-white);
+}
+
+.attendance-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-4);
+}
+
+.attendance-history th,
+.attendance-history td {
+    padding: var(--spacing-3) var(--spacing-4);
+    text-align: left;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.attendance-history th {
+    background-color: var(--color-gray-100);
+    font-weight: var(--font-weight-semibold);
+}
+
+.attendance-history tr:hover {
+    background-color: var(--color-gray-50);
+}

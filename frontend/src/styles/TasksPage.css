@@ -1,0 +1,112 @@
+.task-form {
+    margin-top: var(--spacing-4);
+}
+
+.task-form .form-group {
+    margin-bottom: var(--spacing-4);
+}
+
+.intern-selection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding: var(--spacing-4);
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.intern-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    cursor: pointer;
+    padding: var(--spacing-2);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.intern-checkbox:hover {
+    background-color: var(--color-gray-100);
+}
+
+.intern-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-4);
+}
+
+.task-card {
+    padding: var(--spacing-5);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.task-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-3);
+}
+
+.task-header h4 {
+    margin: 0;
+    color: var(--color-gray-900);
+    font-size: var(--font-size-lg);
+}
+
+.task-description {
+    color: var(--color-gray-700);
+    margin-bottom: var(--spacing-4);
+    line-height: var(--line-height-relaxed);
+}
+
+.task-meta {
+    padding-top: var(--spacing-3);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.task-deadline {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.overdue-label {
+    color: var(--color-error);
+    font-weight: var(--font-weight-semibold);
+    margin-left: var(--spacing-2);
+}
+
+.task-submit-section {
+    margin-top: var(--spacing-4);
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.task-submit-section input[type="file"] {
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-2);
+    width: 100%;
+}
+
+.submit-actions {
+    display: flex;
+    gap: var(--spacing-2);
+}

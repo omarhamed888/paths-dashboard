@@ -1,0 +1,105 @@
+.notification-panel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    max-height: 500px;
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    margin-top: var(--spacing-2);
+    overflow: hidden;
+    z-index: var(--z-dropdown);
+    animation: slideInUp var(--transition-fast);
+}
+
+.notification-header {
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-gray-50);
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-900);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: var(--font-size-xl);
+    color: var(--color-gray-500);
+    cursor: pointer;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
+.notification-list {
+    overflow-y: auto;
+    max-height: 440px;
+}
+
+.notification-item {
+    padding: var(--spacing-4);
+    border-bottom: 1px solid var(--color-gray-100);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.notification-item:hover {
+    background-color: var(--color-gray-50);
+}
+
+.notification-item.unread {
+    background-color: var(--color-primary-50);
+    border-left: 3px solid var(--color-primary-500);
+}
+
+.notification-item.notification-critical {
+    border-left: 3px solid var(--color-error);
+}
+
+.notification-item.notification-warning {
+    border-left: 3px solid var(--color-warning);
+}
+
+.notification-title {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-2);
+    font-size: var(--font-size-sm);
+}
+
+.notification-message {
+    color: var(--color-gray-700);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-2);
+    line-height: var(--line-height-normal);
+}
+
+.notification-time {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+}
+
+.notification-loading,
+.notification-empty {
+    padding: var(--spacing-8);
+    text-align: center;
+    color: var(--color-gray-500);
+}
