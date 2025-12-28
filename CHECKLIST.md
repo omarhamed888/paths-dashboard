@@ -248,7 +248,7 @@ Dashboard/
 
 **Project Status**:  Production Ready
 **Last Updated**: December 28, 2025
-**Developer**: [Your Name]
+**Developer**: [Mohamed Ayman]
 **Company**: Paths4 AI
 
 ##  Final Note
