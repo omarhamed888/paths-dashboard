@@ -98,7 +98,6 @@ Includes:
 Questions? Check:
 1. [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment guide
 2. [SETUP.md](./SETUP.md) - Development guide
-3. Contact developer: [Your Contact]
 
 ##  System Health
 
