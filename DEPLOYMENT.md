@@ -205,13 +205,6 @@ tar -czf uploads_backup_$(date +%Y%m%d).tar.gz backend/uploads/
 - Check `MAX_FILE_SIZE` setting
 - Ensure sufficient disk space
 
-##  Support
-
-For deployment issues, contact:
-- Developer: [Your Contact]
-- Documentation: This file
-- GitHub: [Repository URL if applicable]
-
 ##  Update Process
 
 ```bash
