@@ -1,20 +1,20 @@
-# 📦 Quick Start Package
+#  Quick Start Package
 
 This package contains everything needed to deploy the Intern Management System.
 
-## 📂 What's Included
+##  What's Included
 
 ```
 Dashboard/
-├── backend/           # Backend API (Node.js + Express)
-├── frontend/          # Frontend App (React + Vite)
-├── database/          # Database schemas & seeds
-├── DEPLOYMENT.md      # 👈 START HERE - Full deployment guide
-├── SETUP.md          # Development setup
-└── README.md         # This file
+ backend/           # Backend API (Node.js + Express)
+ frontend/          # Frontend App (React + Vite)
+ database/          # Database schemas & seeds
+ DEPLOYMENT.md      #  START HERE - Full deployment guide
+ SETUP.md          # Development setup
+ README.md         # This file
 ```
 
-## 🚀 Quick Deploy (5 Steps)
+##  Quick Deploy (5 Steps)
 
 ### 1. Install Requirements
 - Node.js 18+ ([Download](https://nodejs.org/))
@@ -48,9 +48,9 @@ npm run build
 - Upload `frontend/dist` to your web server
 - Keep backend running (use PM2 for production)
 
-## 📖 Full Instructions
+##  Full Instructions
 
-**👉 See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment guide**
+** See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment guide**
 
 Includes:
 - Detailed setup instructions
@@ -59,55 +59,55 @@ Includes:
 - Security checklist
 - Troubleshooting guide
 
-## 🔑 Default Login (After seed.sql)
+##  Default Login (After seed.sql)
 
 - **Email**: admin@example.com
 - **Password**: admin123
-- ⚠️ Change immediately in production!
+-  Change immediately in production!
 
-## 🎯 System Features
+##  System Features
 
 ### For Admins
-- 📊 Dashboard with KPIs
-- 👥 Intern management
-- 📝 Task creation & assignment
-- 📅 Attendance tracking
-- ⭐ Submission rating
-- 🔔 Alert monitoring
+-  Dashboard with KPIs
+-  Intern management
+-  Task creation & assignment
+-  Attendance tracking
+-  Submission rating
+-  Alert monitoring
 
 ### For Interns
-- 📱 Personal dashboard
-- ✅ Task submission
-- 📈 Performance tracking
-- 👤 Profile with photo
-- 🔔 Notifications
+-  Personal dashboard
+-  Task submission
+-  Performance tracking
+-  Profile with photo
+-  Notifications
 
 ### Automated
 - Auto-alerts for absences
 - Performance monitoring
 - Late submission tracking
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: Node.js, Express, TypeScript, PostgreSQL
 - **Frontend**: React, TypeScript, Vite
 - **Security**: JWT, bcrypt, httpOnly cookies
 
-## 📞 Support
+##  Support
 
 Questions? Check:
 1. [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment guide
 2. [SETUP.md](./SETUP.md) - Development guide
 3. Contact developer: [Your Contact]
 
-## 🔄 System Health
+##  System Health
 
 To verify deployment:
 - Backend: Should run on port 5000
 - Frontend: Should serve from dist folder
 - Database: 7 tables created successfully
 
-## 📦 Deployment Checklist
+##  Deployment Checklist
 
 - [ ] PostgreSQL installed and running
 - [ ] Database created with schema.sql
@@ -124,5 +124,5 @@ To verify deployment:
 
 **Project**: Intern Management System
 **Version**: 1.0.0
-**Status**: ✅ Production Ready
+**Status**:  Production Ready
 **Date**: December 28, 2025

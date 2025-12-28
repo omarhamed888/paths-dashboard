@@ -1,9 +1,9 @@
 # Intern Management System - Deployment Guide
 
-## 📋 Overview
+##  Overview
 Production-ready Intern Management System for Paths4 AI with automated monitoring, task management, and attendance tracking.
 
-## 🏗️ Technology Stack
+##  Technology Stack
 
 ### Backend
 - **Runtime**: Node.js 18+ with TypeScript
@@ -19,7 +19,7 @@ Production-ready Intern Management System for Paths4 AI with automated monitorin
 - **Routing**: React Router v6
 - **Styling**: Vanilla CSS with CSS Variables
 
-## 🚀 Deployment Steps
+##  Deployment Steps
 
 ### 1. Prerequisites
 - Node.js 18 or higher
@@ -141,18 +141,18 @@ server {
 }
 ```
 
-## 🔒 Security Checklist
+##  Security Checklist
 
-- ✅ Strong JWT secret (min 32 characters)
-- ✅ Secure database password
-- ✅ HTTPS enabled in production
-- ✅ CORS configured correctly
-- ✅ File upload size limits set
-- ✅ SQL injection prevention (parameterized queries)
-- ✅ Password hashing with bcrypt
-- ✅ httpOnly cookies for JWT
+-  Strong JWT secret (min 32 characters)
+-  Secure database password
+-  HTTPS enabled in production
+-  CORS configured correctly
+-  File upload size limits set
+-  SQL injection prevention (parameterized queries)
+-  Password hashing with bcrypt
+-  httpOnly cookies for JWT
 
-## 📊 Database Schema
+##  Database Schema
 
 The system uses 7 main tables:
 - `users` - User accounts (admin/intern)
@@ -163,14 +163,14 @@ The system uses 7 main tables:
 - `task_ratings` - Admin ratings
 - `notifications` - System alerts
 
-## 🎯 Default Admin Account
+##  Default Admin Account
 
 After running seed.sql:
 - **Email**: admin@example.com
 - **Password**: admin123
-- ⚠️ **IMPORTANT**: Change this password immediately in production!
+-  **IMPORTANT**: Change this password immediately in production!
 
-## 📈 Monitoring & Maintenance
+##  Monitoring & Maintenance
 
 ### Health Check Endpoints
 - Backend: `GET /api/health` (TODO: Add this endpoint)
@@ -188,7 +188,7 @@ pg_dump intern_management > backup_$(date +%Y%m%d).sql
 tar -czf uploads_backup_$(date +%Y%m%d).tar.gz backend/uploads/
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Backend won't start
 - Check PostgreSQL is running: `systemctl status postgresql`
@@ -205,14 +205,14 @@ tar -czf uploads_backup_$(date +%Y%m%d).tar.gz backend/uploads/
 - Check `MAX_FILE_SIZE` setting
 - Ensure sufficient disk space
 
-## 📞 Support
+##  Support
 
 For deployment issues, contact:
 - Developer: [Your Contact]
 - Documentation: This file
 - GitHub: [Repository URL if applicable]
 
-## 🔄 Update Process
+##  Update Process
 
 ```bash
 # Pull latest changes
@@ -231,7 +231,7 @@ npm run build
 # Deploy new dist folder
 ```
 
-## 🎨 Features
+##  Features
 
 ### Admin Features
 - Dashboard with KPIs
@@ -250,11 +250,11 @@ npm run build
 - Performance tracking
 
 ### Automated Alerts
-- 2 consecutive absences → Critical alert
-- 2+ late/missed tasks → Performance warning
-- Low rating (≤2 stars) → Performance review
+- 2 consecutive absences  Critical alert
+- 2+ late/missed tasks  Performance warning
+- Low rating (2 stars)  Performance review
 
-## 💾 System Requirements
+##  System Requirements
 
 ### Minimum
 - 2 CPU cores
@@ -268,7 +268,7 @@ npm run build
 - 50GB SSD storage
 - Ubuntu 22.04 LTS
 
-## 📄 License
+##  License
 
 Internal use only - Paths4 AI
 
@@ -276,4 +276,4 @@ Internal use only - Paths4 AI
 
 **Last Updated**: December 28, 2025
 **Version**: 1.0.0
-**Status**: Production Ready ✅
+**Status**: Production Ready 
