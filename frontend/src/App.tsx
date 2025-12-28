@@ -7,9 +7,12 @@ import InternDashboard from './pages/InternDashboard';
 import TasksPage from './pages/TasksPage';
 import AttendancePage from './pages/AttendancePage';
 import ProfilePage from './pages/ProfilePage';
-import Sidebar from './components/Sidebar';
 import InternsPage from './pages/InternsPage';
+import NotificationsPage from './pages/NotificationsPage';
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 import './index.css';
+import './styles/Layout.css';
 import './styles/Animations.css';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode; allowedRole?: 'admin' | 'intern' }> = ({
@@ -33,6 +36,7 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode; allowedRole?: 'admin
     return (
         <>
             <Sidebar />
+            <Topbar />
             <main className="main-content">{children}</main>
         </>
     );
@@ -90,6 +94,15 @@ const AppRoutes: React.FC = () => {
                 element={
                     <ProtectedRoute>
                         <ProfilePage />
+                    </ProtectedRoute>
+                }
+            />
+
+            <Route
+                path="/notifications"
+                element={
+                    <ProtectedRoute>
+                        <NotificationsPage />
                     </ProtectedRoute>
                 }
             />

@@ -1,0 +1,16 @@
+/* Add main-content style to handle topbar offset */
+.main-content {
+    margin-left: 260px;
+    /* Width of sidebar */
+    padding-top: 90px;
+    /* Height of topbar + extra spacing */
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding-bottom: 70px;
+        /* Mobile nav height if bottom bar */
+    }
+}

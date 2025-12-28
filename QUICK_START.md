@@ -70,7 +70,7 @@ Password: admin123
 ##  System Features
 
 **Admins:** Dashboard, Interns, Tasks, Attendance, Ratings, Alerts  
-**Interns:** Dashboard, Tasks, Profile, Notifications, Performance  
+**Interns:** Dashboard, Tasks, Profile, Real-time Notifications, Performance  
 **Automated:** Absence alerts, Performance warnings
 
 ---

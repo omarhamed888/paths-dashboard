@@ -140,7 +140,8 @@ Password: admin123
 - [ ] Download submission
 - [ ] Rate submission
 - [ ] Upload profile photo
-- [ ] Check notifications
+- [ ] Check notifications (verify counter, marked as read updates)
+- [ ] Test "Mark All as Read" functionality
 
 ### 3. Check Automated Alerts:
 - [ ] Mark 2 consecutive absences  Alert appears

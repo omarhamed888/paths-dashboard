@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../utils/api';
 import '../styles/Dashboard.css';
+import '../styles/Ratings.css';
 
 interface InternDashboardData {
     tasks: any[];
@@ -113,35 +114,56 @@ const InternDashboard: React.FC = () => {
                             <div className="empty-state">No ratings yet</div>
                         ) : (
                             data.recentRatings.map((rating, index) => (
-                                <div key={index} className="rating-item">
-                                    <div className="rating-task">{rating.task_title}</div>
-                                    <div className="rating-stars">
-                                        {'★'.repeat(rating.rating)}{'☆'.repeat(5 - rating.rating)}
+                                <div key={index} className="rating-item-container">
+                                    <div className="rating-item-header">
+                                        <div className="rating-task-info">
+                                            <div className="rating-task-title">{rating.task_title}</div>
+                                        </div>
+                                        <div className="rating-actions">
+                                            {rating.feedback && (
+                                                <div className="feedback-wrapper">
+                                                    <button
+                                                        className="feedback-btn"
+                                                        onClick={(e) => {
+                                                            const target = e.currentTarget.nextElementSibling;
+                                                            if (target) {
+                                                                const isHidden = window.getComputedStyle(target).display === 'none';
+                                                                if (isHidden) {
+                                                                    target.classList.add('show');
+                                                                    (target as HTMLElement).style.display = 'block';
+                                                                } else {
+                                                                    target.classList.remove('show');
+                                                                    (target as HTMLElement).style.display = 'none';
+                                                                }
+                                                            }
+                                                        }}
+                                                        title="View Feedback"
+                                                    >
+                                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                                        </svg>
+                                                        Feedback
+                                                    </button>
+                                                    <div className="feedback-popover">
+                                                        {rating.feedback}
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <div className="stars">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <span key={i} className={`star ${i < rating.rating ? 'filled' : ''}`}>
+                                                        ★
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
-                                    {rating.feedback && (
-                                        <div className="rating-feedback">{rating.feedback}</div>
-                                    )}
                                 </div>
                             ))
                         )}
                     </div>
                 </div>
             </div>
-
-            {data.notifications.length > 0 && (
-                <div className="card mt-6">
-                    <div className="card-header">
-                        <h3>Unread Notifications</h3>
-                    </div>
-                    <div className="notifications-list">
-                        {data.notifications.slice(0, 5).map((notif) => (
-                            <div key={notif.id} className={`notification-brief notification-${notif.severity}`}>
-                                <strong>{notif.title}</strong> - {notif.message}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
         </div>
     );
 };

@@ -69,6 +69,28 @@ export const markAsRead = async (req: AuthRequest, res: Response): Promise<void>
 };
 
 /**
+ * Mark all notifications as read
+ */
+export const markAllAsRead = async (req: AuthRequest, res: Response): Promise<void> => {
+    try {
+        if (!req.user) {
+            res.status(401).json({ error: 'Not authenticated' });
+            return;
+        }
+
+        await query(
+            'UPDATE notifications SET is_read = true WHERE user_id = $1',
+            [req.user.id]
+        );
+
+        res.json({ message: 'All notifications marked as read' });
+    } catch (error) {
+        console.error('Mark all as read error:', error);
+        res.status(500).json({ error: 'Failed to mark notifications as read' });
+    }
+};
+
+/**
  * Get count of unread notifications
  */
 export const getUnreadCount = async (req: AuthRequest, res: Response): Promise<void> => {

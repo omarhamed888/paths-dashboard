@@ -80,7 +80,7 @@ Includes:
 -  Task submission
 -  Performance tracking
 -  Profile with photo
--  Notifications
+-  Advanced Notification System (Real-time alerts, Bulk Mark Read)
 
 ### Automated
 - Auto-alerts for absences

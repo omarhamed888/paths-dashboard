@@ -2,6 +2,7 @@ import { Router } from 'express';
 import {
     getNotifications,
     markAsRead,
+    markAllAsRead,
     getUnreadCount,
 } from '../controllers/notifications.controller';
 import { authenticateToken } from '../middleware/auth.middleware';
@@ -13,6 +14,12 @@ const router = Router();
  * Get user notifications with filtering
  */
 router.get('/', authenticateToken, getNotifications);
+
+/**
+ * PUT /api/notifications/mark-all-read
+ * Mark all notifications as read
+ */
+router.put('/mark-all-read', authenticateToken, markAllAsRead);
 
 /**
  * PUT /api/notifications/:id/read
