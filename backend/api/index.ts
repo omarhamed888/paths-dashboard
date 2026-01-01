@@ -5,12 +5,12 @@ import dotenv from 'dotenv';
 import path from 'path';
 
 // Import routes
-import authRoutes from './routes/auth.routes';
-import userRoutes from './routes/users.routes';
-import attendanceRoutes from './routes/attendance.routes';
-import taskRoutes from './routes/tasks.routes';
-import notificationRoutes from './routes/notifications.routes';
-import dashboardRoutes from './routes/dashboard.routes';
+import authRoutes from '../src/routes/auth.routes';
+import userRoutes from '../src/routes/users.routes';
+import attendanceRoutes from '../src/routes/attendance.routes';
+import taskRoutes from '../src/routes/tasks.routes';
+import notificationRoutes from '../src/routes/notifications.routes';
+import dashboardRoutes from '../src/routes/dashboard.routes';
 
 // Load environment variables
 dotenv.config();
